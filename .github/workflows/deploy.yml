@@ -47,4 +47,5 @@ jobs:
           python_version: "3.11.9"
 
       - name: Mock deployment notice
+        if: always()
         run: echo "mock-розгортання на хероку, не повинне працювати"

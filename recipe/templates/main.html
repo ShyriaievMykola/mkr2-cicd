@@ -3,6 +3,7 @@
 {% block content %}
   <div class="container">
     <h1>Recipes</h1>
+    <a href="{% url 'category_list' %}" class="btn btn-primary mb-3">Всі категорії</a>
     {% for recipe in recipes %}
       <div class="card my-4">
         <div class="card-body">

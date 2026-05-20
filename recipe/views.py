@@ -7,6 +7,11 @@ def main(request):
     return render(request, 'main.html', {'recipes': recipes})
 
 
+def category_list(request):
+    categories = Category.objects.all()
+    return render(request, 'category_list.html', {'categories': categories})
+
+
 def category_detail(request, pk):
     category = get_object_or_404(Category, pk=pk)
     return render(request, 'category_detail.html', {'category': category})
